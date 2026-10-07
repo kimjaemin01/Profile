@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>김재민 포트폴리오</title>
+  <meta name="description" content="김재민 — 백엔드 · 데이터 개발자 포트폴리오">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* 테마 깜빡임 방지: 저장된 테마를 먼저 적용 */
+    try { var t = localStorage.getItem('pf-theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+<!--BODY-START-->
+<a class="skip" href="#main" data-i18n="ui.skip">본문으로 건너뛰기</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">kim.jaemin<span class="caret">_</span></a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about" data-i18n="nav.about">소개</a>
+      <a href="#skills" data-i18n="nav.skills">기술</a>
+      <a href="#projects" data-i18n="nav.projects">프로젝트</a>
+      <a href="#timeline" data-i18n="nav.timeline">이력</a>
+      <a href="#contact" data-i18n="nav.contact">연락처</a>
+    </nav>
+
+    <div class="controls">
+      <label class="sr" for="lang" data-i18n="ui.lang">언어</label>
+      <select id="lang" class="lang">
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+      </select>
+      <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      </button>
+      <button id="menuBtn" class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero wrap" id="top">
+    <div class="hero-text">
+      <p class="eyebrow mono" data-i18n="hero.eyebrow">백엔드 · 데이터 개발자</p>
+      <h1 class="hero-name">
+        <span data-i18n="hero.name">김재민</span>
+        <span class="hanja" data-i18n="hero.sub">金載旻 · Kim Jaemin</span>
+      </h1>
+      <p class="lead" data-i18n="hero.lead">데이터를 다루고 관리해 문제를 해결하는 개발자를 목표로 합니다.</p>
+
+      <ul class="stack-line" aria-label="Main stack">
+        <li>Java · Spring</li><li>eGovFrame</li><li>MyBatis</li><li>MySQL</li><li>Python · pandas</li><li>FastAPI</li><li>Docker · K8s</li><li>LLM · RAG</li>
+      </ul>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects" data-i18n="hero.cta1">프로젝트 보기</a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">연락하기</a>
+      </div>
+
+      <div class="term mono" aria-label="crontab">
+        <div class="term-bar"><span></span><span></span><span></span><em>~/etl — crontab -l</em></div>
+        <code><span class="c-mute"># <span data-i18n="hero.cron">매시 정각 ETL 실행 · 결과는 로그로 기록</span></span>
+<span class="c-acc">0 * * * *</span> python3 etl.py &gt;&gt; logs/etl.log 2&gt;&amp;1</code>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <div class="portrait-frame">
+        <img src="assets/profile.jpg" alt="김재민 프로필 사진" width="496" height="640" data-i18n-alt="hero.photoAlt">
+      </div>
+      <figcaption class="mono">
+        <span>KIM JAEMIN</span>
+        <span data-i18n="hero.caption">스마트금융과 · 2026</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section wrap" id="about">
+    <header class="sec-head">
+      <p class="path mono">/about</p>
+      <h2 data-i18n="about.title">소개</h2>
+    </header>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="motto" data-i18n="about.motto">스스로의 가치를 증명하는 개발자가 되겠습니다.</p>
+        <p data-i18n="about.p1"></p>
+        <p data-i18n="about.p2"></p>
+      </div>
+      <ul class="strengths">
+        <li>
+          <h3 data-i18n="about.s1t">책임감</h3>
+          <p data-i18n="about.s1d"></p>
+        </li>
+        <li>
+          <h3 data-i18n="about.s2t">유연한 사고</h3>
+          <p data-i18n="about.s2d"></p>
+        </li>
+        <li>
+          <h3 data-i18n="about.s3t">실행 중심</h3>
+          <p data-i18n="about.s3d"></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section wrap" id="skills">
+    <header class="sec-head">
+      <p class="path mono">/skills</p>
+      <h2 data-i18n="skills.title">보유 기술</h2>
+      <p class="sec-sub" data-i18n="skills.sub"></p>
+    </header>
+    <div class="table-scroll">
+      <table class="skills">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="skills.thArea">분야</th>
+            <th scope="col" data-i18n="skills.thName">기술명</th>
+            <th scope="col" data-i18n="skills.thLevel">수준</th>
+            <th scope="col" data-i18n="skills.thDetail">상세 내용</th>
+          </tr>
+        </thead>
+        <tbody id="skillRows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section wrap" id="projects">
+    <header class="sec-head">
+      <p class="path mono">/projects</p>
+      <h2 data-i18n="projects.title">프로젝트</h2>
+      <p class="sec-sub" data-i18n="projects.sub"></p>
+    </header>
+    <div class="filters" role="group" aria-label="Filter">
+      <button type="button" class="chip is-on" data-filter="all" data-i18n="filter.all">전체</button>
+      <button type="button" class="chip" data-filter="web" data-i18n="filter.web">웹 · 백엔드</button>
+      <button type="button" class="chip" data-filter="data" data-i18n="filter.data">데이터</button>
+      <button type="button" class="chip" data-filter="ai" data-i18n="filter.ai">AI · LLM</button>
+    </div>
+    <div class="projects" id="projectList"></div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section wrap" id="timeline">
+    <header class="sec-head">
+      <p class="path mono">/timeline</p>
+      <h2 data-i18n="timeline.title">이력</h2>
+    </header>
+    <div class="tl-grid">
+      <div>
+        <h3 class="tl-head" data-i18n="timeline.edu">학력 · 교육</h3>
+        <ol class="tl" id="eduList"></ol>
+      </div>
+      <div>
+        <h3 class="tl-head" data-i18n="timeline.cert">자격증</h3>
+        <ol class="tl" id="certList"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section wrap contact" id="contact">
+    <header class="sec-head">
+      <p class="path mono">/contact</p>
+      <h2 data-i18n="contact.title">연락처</h2>
+      <p class="sec-sub" data-i18n="contact.lead"></p>
+    </header>
+    <div class="contact-rows">
+      <div class="c-row">
+        <span class="c-label mono">Email</span>
+        <span class="c-val" id="emailText">acejm153@naver.com</span>
+        <button type="button" class="btn btn-ghost btn-sm" id="copyBtn" data-i18n="contact.copy">복사</button>
+      </div>
+      <div class="c-row">
+        <span class="c-label mono">GitHub</span>
+        <a class="c-val" href="https://github.com/kimjaemin01" target="_blank" rel="noopener">github.com/kimjaemin01</a>
+      </div>
+      <div class="c-row">
+        <span class="c-label mono">Hugging Face</span>
+        <a class="c-val" href="https://huggingface.co/jaemin01" target="_blank" rel="noopener">huggingface.co/jaemin01</a>
+      </div>
+    </div>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer class="footer wrap">
+  <p class="mono">© 2026 Kim Jaemin</p>
+  <p class="mono" data-i18n="footer.note">HTML · CSS · JavaScript</p>
+</footer>
+<!--BODY-END-->
+<script src="script.js"></script>
+</body>
+</html>
